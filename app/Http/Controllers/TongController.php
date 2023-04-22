@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class TongController extends Controller
 {
     public function tinhTong(Request $request)
-    {$sum = $request->soA +  $request->soB;
+    {$tong = $request->soA +  $request->soB;
         return view('tong',compact('tong'));
     }
 }

@@ -11,6 +11,6 @@
     </div>
     <button type="submit" class="btb btn--primary">Tính</button>
     <div>
-        <input type="number" class="form-control" placeholder="Kết quả" disabled="" value="<?php if(esset($sum)) echo $sum; ?>">
+        <input type="number" class="form-control" placeholder="Kết quả" disabled="" value="<?php if(isset($tong)) echo $tong; ?>">
     </div>
 </form>

@@ -27,14 +27,15 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/welcome',[App\http\Controllers\UserController::class,'xinchao']);
 
 //  Tính tổng hai số 
-Route::get('/', function(){
+// Route::get('/tong', [App\http\Controllers\TongController::class,'tinhTong']);
+Route::get('/tong', function(){
     return view('tong');
 });
 Route::post('/tong', [App\http\Controllers\TongController::class,'tinhTong']);
 
-Route::get('/', function(){
+Route::get('/areaOfShape', function(){
     return view('areaOfShape');
 });
-Route::post('/areaOfShape', [App\http\Controllers\TongController::class,'computeArea']);
+Route::post('/areaOfShape', [App\http\Controllers\areaOfShapController::class,'computeArea']);
 
 

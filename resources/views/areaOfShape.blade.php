@@ -31,7 +31,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <h2>The result: {{$areaTriangle}}</h2>
+    <h2>The result: {{$areaTriangle}} </h2>
     </div>
 
     <div style="width:404">
@@ -57,7 +57,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <h2>The result: {{$areaQuadrangle}}</h2>
+    <h2>The result: {{$areaQuadrangle}} </h2>
     </div>
     </div>
 </body>
