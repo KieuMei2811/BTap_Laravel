@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class SumController extends Controller
 {
-    // public function showForm()
-    // {
-    //     return view('sum');
-    // }
+    public function showForm()
+    {
+        return view('sum');
+    }
 
     public function tinhTong(Request $request)
     {

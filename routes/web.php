@@ -28,14 +28,30 @@ use Illuminate\Support\Facades\Route;
 
 //  Tính tổng hai số 
 // Route::get('/tong', [App\http\Controllers\TongController::class,'tinhTong']);
-Route::get('/tong', function(){
-    return view('tong');
+// Route::get('/tong', function(){
+//     return view('tong');
+// });
+// Route::post('/tong', [App\http\Controllers\TongController::class,'tinhTong']);
+
+// Route::get('/areaOfShape', function(){
+//     return view('areaOfShape');
+// });
+// Route::post('/areaOfShape', [App\http\Controllers\areaOfShapController::class,'computeArea']);
+// Validation 
+// Route::get('/SignupRequest', [App\http\Controllers\SingupController::class,'index']);
+// Route::post('/SignupRequest', [App\http\Controllers\SingupController::class,'displayInfor']);
+
+// Route::get('SignupRequest',"SignupController@index");
+// Route::get('SignupRequest',"SignupController@displayInfor");
+Route::get('/', function(){
+    return view('welcome');
 });
-Route::post('/tong', [App\http\Controllers\TongController::class,'tinhTong']);
+Route::get('homepage',[App\http\Controllers\PageController::class,'getIndex']);
 
-Route::get('/areaOfShape', function(){
-    return view('areaOfShape');
+Route::get('databse',function(){
+    Schema::create('loaisanpham',function($table){
+        $table->increments('id');
+        $table->string('ten',200);
+    });
+    echo "Đã thực hiện lệnh tạo bảng thành công";
 });
-Route::post('/areaOfShape', [App\http\Controllers\areaOfShapController::class,'computeArea']);
-
-
