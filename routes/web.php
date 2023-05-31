@@ -47,11 +47,13 @@ Route::get('/', function(){
     return view('welcome');
 });
 Route::get('homepage',[App\http\Controllers\PageController::class,'getIndex']);
+// Thực hiện lệnh tạo bảng trong database
+// Route::get('databse',function(){
+//     Schema::create('loaisanpham',function($table){
+//         $table->increments('id');
+//         $table->string('ten',200);
+//     });
+//     echo "Đã thực hiện lệnh tạo bảng thành công";
+// });
 
-Route::get('databse',function(){
-    Schema::create('loaisanpham',function($table){
-        $table->increments('id');
-        $table->string('ten',200);
-    });
-    echo "Đã thực hiện lệnh tạo bảng thành công";
-});
+
