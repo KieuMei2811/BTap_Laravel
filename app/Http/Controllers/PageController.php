@@ -16,8 +16,5 @@ class PageController extends Controller
         //dd($new_product);							
     	return view('home',compact('slide','new_product','sanpham_khuyenmai'));						
     }						
-						
-                        
-
     }
 
