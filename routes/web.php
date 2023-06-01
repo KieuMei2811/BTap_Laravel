@@ -46,7 +46,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('welcome');
 });
-Route::get('homepage',[App\http\Controllers\PageController::class,'getIndex']);
 // Thực hiện lệnh tạo bảng trong database
 // Route::get('databse',function(){
 //     Schema::create('loaisanpham',function($table){
@@ -55,5 +54,11 @@ Route::get('homepage',[App\http\Controllers\PageController::class,'getIndex']);
 //     });
 //     echo "Đã thực hiện lệnh tạo bảng thành công";
 // });
+// Web sale
+Route::get('homepage',[App\http\Controllers\PageController::class,'getIndex']);
+
+Route::get('detail/{id}',[App\http\Controllers\PageController::class,'getDetail']);
+
+Route::post('/themgiohang', [App\http\Controllers\PageController::class,'getAddCart'])->name('themgiohang');
 
 
